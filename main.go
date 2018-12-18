@@ -65,14 +65,7 @@ func main() {
 				Port:     i,
 			})
 		}
-		var e []defs.URL
-		r := global.Endpoints
-		for i := range r {
-			if _, err := net.Dial("tcp", fmt.Sprintf("%s:%d", r[i].Address, r[i].Port)); err == nil {
-				e = append(e, r[i])
-			}
-		}
-		global.Endpoints = e
+
 		fallthrough
 	case len(cfg.OtherPorts) > 0:
 		for i := range cfg.OtherPorts {
@@ -85,6 +78,14 @@ func main() {
 			})
 		}
 	}
+	r := global.Endpoints
+	var e []defs.URL
+	for i := range r {
+		if _, err := net.Dial("tcp", fmt.Sprintf("%s:%d", r[i].Address, r[i].Port)); err == nil {
+			e = append(e, r[i])
+		}
+	}
+	global.Endpoints = e
 	for i := range global.Endpoints {
 		fmt.Println(global.Endpoints[i].String())
 	}
