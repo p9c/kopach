@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"net"
 	"os"
 	"path/filepath"
 	"strings"
@@ -48,7 +49,8 @@ func main() {
 	}
 	url := defs.ParseURL(cfg.URL)
 	global.Endpoints = append(global.Endpoints, url)
-	if !cfg.OneOnly {
+	switch {
+	case !cfg.OneOnly:
 		p := url.Port + 1
 		if p == 0 {
 			p = 11048
@@ -63,9 +65,27 @@ func main() {
 				Port:     i,
 			})
 		}
+		var e []defs.URL
 		r := global.Endpoints
 		for i := range r {
-			fmt.Printf("%s:%s@%s://%s:%d\n", r[i].Username, r[i].Password, r[i].Protocol, r[i].Address, r[i].Port)
+			if _, err := net.Dial("tcp", fmt.Sprintf("%s:%d", r[i].Address, r[i].Port)); err == nil {
+				e = append(e, r[i])
+			}
 		}
+		global.Endpoints = e
+		fallthrough
+	case len(cfg.OtherPorts) > 0:
+		for i := range cfg.OtherPorts {
+			global.Endpoints = append(global.Endpoints, defs.URL{
+				Username: url.Username,
+				Password: url.Password,
+				Protocol: url.Protocol,
+				Address:  url.Address,
+				Port:     cfg.OtherPorts[i],
+			})
+		}
+	}
+	for i := range global.Endpoints {
+		fmt.Println(global.Endpoints[i].String())
 	}
 }

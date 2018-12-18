@@ -90,3 +90,7 @@ func ParseURL(url string) (out URL) {
 
 	return
 }
+
+func (u *URL) String() string {
+	return fmt.Sprintf("%s:%s@%s://%s:%d", u.Username, u.Password, u.Protocol, u.Address, u.Port)
+}
