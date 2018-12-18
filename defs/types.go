@@ -65,23 +65,22 @@ func ParseURL(url string) (out URL) {
 	case 2:
 		out.Protocol = bits[0]
 		ip := strings.Split(bits[1], ":")
-		out.Address = ip[0]
 		out.Address = "127.0.0.1"
+		out.Port = 11048
 		switch len(ip) {
 		case 1:
-			if out.Address != "" {
+			if ip[0] != "" {
 				out.Address = ip[0]
 			}
-			out.Port = 11048
 		case 2:
-			if ip[0] == "" {
-				out.Address = "127.0.0.1"
+			if ip[0] != "" {
+				out.Address = ip[0]
 			}
 			port, err := strconv.Atoi(ip[1])
-			if err != nil {
-				out.Port = 11048
-			} else {
-				out.Port = uint32(port)
+			if err == nil {
+				if port > 1024 && port < 65536 {
+					out.Port = uint32(port)
+				}
 			}
 		}
 	default:
