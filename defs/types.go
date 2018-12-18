@@ -18,13 +18,13 @@ type URL struct {
 
 // ParseURL takes a string in the format user:pa55word@http://127.0.0.1:11348 and returns a URL struct. This parsing is without any safety checks but should get caught upstream or cause a panic
 func ParseURL(url string) (out URL) {
-	// defer func() {
-	// 	if r := recover(); r != nil {
-	// 		fmt.Fprintf(os.Stderr, "ERROR: malformed URL %s\n", r)
-	// 		fmt.Println(out)
-	// 		out = URL{}
-	// 	}
-	// }()
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Fprintf(os.Stderr, "ERROR: malformed URL %s\n", r)
+			fmt.Println(out)
+			out = URL{}
+		}
+	}()
 	s1 := strings.Split(url, "@")
 	var creds []string
 	var address string
