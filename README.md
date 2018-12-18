@@ -1,0 +1,2 @@
+# kopach
+Miner for Parallelcoin
