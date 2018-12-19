@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net"
 	"os"
 	"path/filepath"
@@ -10,6 +11,7 @@ import (
 	"github.com/parallelcointeam/kopach/defs"
 	"github.com/parallelcointeam/kopach/global"
 	"github.com/parallelcointeam/pod/btcjson"
+	"github.com/parallelcointeam/pod/rpcclient"
 )
 
 const (
@@ -88,5 +90,28 @@ func main() {
 	global.Endpoints = e
 	for i := range global.Endpoints {
 		fmt.Println(global.Endpoints[i].String())
+		// Connect to local bitcoin core RPC server using HTTP POST mode.
+		connCfg := &rpcclient.ConnConfig{
+			Host:         fmt.Sprintf("%s:%d", global.Endpoints[i].Address, global.Endpoints[i].Port),
+			User:         global.Endpoints[i].Username,
+			Pass:         global.Endpoints[i].Password,
+			HTTPPostMode: true,                                    // Bitcoin core only supports HTTP POST mode
+			TLS:          global.Endpoints[i].Protocol == "https", // Bitcoin core does not provide TLS by default
+		}
+		// Notice the notification parameter is nil since notifications are
+		// not supported in HTTP POST mode.
+		client, err := rpcclient.New(connCfg, nil)
+		if err != nil {
+			log.Fatal(err)
+		}
+		defer client.Shutdown()
+		res, err := client.GetWork()
+		if err != nil {
+			fmt.Println("ERROR", err)
+		}
+		fmt.Printf("Data     %s\n", res.Data)
+		fmt.Printf("Hash1    %s\n", res.Hash1)
+		fmt.Printf("Midstate %s\n", res.Hash1)
+		fmt.Printf("Target   %s\n", res.Target)
 	}
 }

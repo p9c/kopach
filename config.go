@@ -47,6 +47,8 @@ type config struct {
 	TLSSkipVerify bool     `long:"skipverify" description:"Do not verify tls certificates (not recommended!)"`
 	Addresses     []string `short:"a" long:"addr" description:"Addresses to mine to (add multiple for random selection)"`
 	Interactive   bool     `short:"I" long:"interactive" description:"Schedules kernel to do shorter jobs when mining with a card also running a display"`
+	ListDevices   bool     `short:"l" long:"list" description:"List available OpenCL devices"`
+	ActiveDevices []uint32 `short:"d" long:"dev" description:"Sets a white list of devices that will run the OpenCL miner kernels"`
 }
 
 // cleanAndExpandPath expands environement variables and leading ~ in the
