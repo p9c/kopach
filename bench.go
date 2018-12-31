@@ -8,29 +8,39 @@ import (
 	"time"
 )
 
+var (
+	sha256Reps = int(1 << 22)
+	scryptReps = int(1 << 14)
+	hf1Reps    = int(1 << 7)
+)
+
 // Bench runs benchmarks on all algorithms for each hardfork level
 func Bench() {
 	fmt.Println("Benchmark requested")
 	fmt.Println("Please turn off any high cpu processes for a more accurate benchmark")
-	// time.Sleep(3 * time.Second)
 	fmt.Println("Pre-HF1 benchmarks:")
 	fork.IsTestnet = false
 	for a := range fork.List[0].AlgoVers {
 		fmt.Println("Benchmarking algo", fork.List[0].AlgoVers[a])
-		speed := bench(0, fork.List[0].AlgoVers[a])
+		var speed int64
+		switch a {
+		case 2:
+			speed = bench(0, fork.List[0].AlgoVers[a], sha256Reps)
+		case 514:
+			speed = bench(0, fork.List[0].AlgoVers[a], scryptReps)
+		}
 		fmt.Println(speed, "ns/hash")
-
 	}
 	fmt.Println("HF1 benchmarks:")
 	fork.IsTestnet = true
 	for a := range fork.List[1].AlgoVers {
 		fmt.Println("Benchmarking algo", fork.List[1].AlgoVers[a])
-		speed := bench(1, fork.List[1].AlgoVers[a])
-		fmt.Println(speed, "ns/hash")
+		speed := bench(1, fork.List[1].AlgoVers[a], hf1Reps)
+		fmt.Println(speed/1000, "μs/hash")
 	}
 }
 
-func bench(hf int, algo string) int64 {
+func bench(hf int, algo string, reps int) int64 {
 	startTime := time.Now()
 	b := make([]byte, 80)
 	rand.Read(b)
@@ -42,12 +52,10 @@ func bench(hf int, algo string) int64 {
 	if hf == 1 {
 		height = fork.List[1].ActivationHeight
 	}
-	max := uint32(1 << 8)
 	var done bool
-	var i uint32
-	for i = uint32(0); i < max && !done; i++ {
+	var i int
+	for i = 0; i < reps && !done; i++ {
 		b, done = updateNonce(b)
-		// fmt.Println(b, algo, height)
 		fork.Hash(b, algo, height)
 	}
 	endTime := time.Now()
@@ -69,6 +77,5 @@ func updateNonce(b []byte) (out []byte, done bool) {
 	for i := range b[76:80] {
 		b[76+i] = nonceBytes[i]
 	}
-	// fmt.Println(nonce)
 	return b, done
 }
