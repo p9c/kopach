@@ -8,7 +8,7 @@ import (
 
 func main() {
 	fmt.Println("Kopach CPU miner for Parallelcoin DUO")
-	cfg, args, err := LoadConfig()
+	cfg, args, err := loadConfig()
 	if err != nil {
 		os.Exit(1)
 	}

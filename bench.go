@@ -9,9 +9,9 @@ import (
 )
 
 var (
-	sha256Reps = int(1 << 22)
-	scryptReps = int(1 << 14)
-	hf1Reps    = int(1 << 7)
+	sha256Reps = int(1 << 24)
+	scryptReps = int(1 << 16)
+	hf1Reps    = int(1 << 9)
 )
 
 // Bench runs benchmarks on all algorithms for each hardfork level
@@ -29,14 +29,14 @@ func Bench() {
 		case 514:
 			speed = bench(0, fork.List[0].AlgoVers[a], scryptReps)
 		}
-		fmt.Println(speed, "ns/hash")
+		fmt.Println(speed, "ns/hash", speed)
 	}
 	fmt.Println("HF1 benchmarks:")
 	fork.IsTestnet = true
 	for a := range fork.List[1].AlgoVers {
 		fmt.Println("Benchmarking algo", fork.List[1].AlgoVers[a])
 		speed := bench(1, fork.List[1].AlgoVers[a], hf1Reps)
-		fmt.Println(speed/1000, "μs/hash")
+		fmt.Println(speed/1000, "μs/hash", speed)
 	}
 }
 
