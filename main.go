@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"github.com/parallelcointeam/pod/fork"
 	"os"
@@ -16,7 +17,11 @@ func main() {
 	if cfg.TestNet3 {
 		fork.IsTestnet = true
 	}
+	var benchmark string
 	if cfg.Bench {
-		Bench()
+		benchmark = Bench()
+		fmt.Println(benchmark)
 	}
+	j, _ := json.MarshalIndent(cfg, "  ", "  ")
+	fmt.Println(string(j))
 }

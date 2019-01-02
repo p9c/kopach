@@ -20,11 +20,13 @@ const (
 )
 
 var (
-	podHomeDir         = btcutil.AppDataDir("pod", false)
-	kopachHomeDir      = btcutil.AppDataDir("kopach", false)
-	defaultConfigFile  = filepath.Join(kopachHomeDir, "kopach.conf")
-	defaultRPCServer   = "localhost"
-	defaultRPCCertFile = filepath.Join(podHomeDir, "rpc.cert")
+	podHomeDir               = btcutil.AppDataDir("pod", false)
+	kopachHomeDir            = btcutil.AppDataDir("kopach", false)
+	defaultConfigFile        = filepath.Join(kopachHomeDir, "kopach.conf")
+	defaultRPCServer         = "localhost"
+	defaultRPCCertFile       = filepath.Join(podHomeDir, "rpc.cert")
+	defaultAlgo              = "random"
+	defaultThreads     int16 = -1
 )
 
 // config defines the configuration options for podctl. See loadConfig for details on the configuration load process.
@@ -45,7 +47,7 @@ type config struct {
 	TLSSkipVerify bool     `long:"skipverify" description:"Do not verify tls certificates (not recommended!)"`
 	Algo          string   `short:"a" long:"algo" description:"Mine with this algorithm, options are blake14lr, cryptonight7v2, keccak, lyra2rev2, scrypt, sha256d, skein, stribog, x11, random or easy"`
 	Bench         bool     `long:"bench" description:"Run a benchmark to compare the solution rate for each algorithm on your CPU (stores result in app data directory for 'easy' mining mode to use)"`
-	Threads       uint16   `short:"t" long:"threads" description:"Number of threads to spawn (default is -1, meaning all cpu core/threads)"`
+	Threads       int16    `short:"t" long:"threads" description:"Number of threads to spawn (default is -1, meaning all cpu core/threads)"`
 	Addresses     []string `short:"A" long:"addr" description:"Addresses to put in block coinbases, chosen randomly from all configured addresses"`
 }
 
@@ -91,6 +93,9 @@ func loadConfig() (*config, []string, error) {
 		ConfigFile: defaultConfigFile,
 		RPCServer:  defaultRPCServer,
 		RPCCert:    defaultRPCCertFile,
+		DataDir:    kopachHomeDir,
+		Algo:       defaultAlgo,
+		Threads:    defaultThreads,
 	}
 	// Pre-parse the command line options to see if an alternative config file, the version flag, or the list commands flag was specified.  Any errors aside from the help message error can be ignored here since they will be caught by the final parse below.
 	preCfg := cfg

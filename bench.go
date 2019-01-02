@@ -3,10 +3,14 @@ package main
 import (
 	"crypto/rand"
 	"encoding/binary"
+	"encoding/json"
 	"fmt"
 	"github.com/parallelcointeam/pod/fork"
 	"time"
 )
+
+// Benchmark is an algo name and a value representing nanoseconds per operation
+type Benchmark map[string]int64
 
 var (
 	sha256Reps = int(1 << 24)
@@ -15,11 +19,13 @@ var (
 )
 
 // Bench runs benchmarks on all algorithms for each hardfork level
-func Bench() {
+func Bench() string {
+	var benchmark []Benchmark
 	fmt.Println("Benchmark requested")
 	fmt.Println("Please turn off any high cpu processes for a more accurate benchmark")
 	fmt.Println("Pre-HF1 benchmarks:")
 	fork.IsTestnet = false
+	benchmark = append(benchmark, make(Benchmark))
 	for a := range fork.List[0].AlgoVers {
 		fmt.Println("Benchmarking algo", fork.List[0].AlgoVers[a])
 		var speed int64
@@ -30,14 +36,19 @@ func Bench() {
 			speed = bench(0, fork.List[0].AlgoVers[a], scryptReps)
 		}
 		fmt.Println(speed, "ns/hash", speed)
+		benchmark[0][fork.List[0].AlgoVers[a]] = speed
 	}
 	fmt.Println("HF1 benchmarks:")
 	fork.IsTestnet = true
+	benchmark = append(benchmark, make(Benchmark))
 	for a := range fork.List[1].AlgoVers {
 		fmt.Println("Benchmarking algo", fork.List[1].AlgoVers[a])
 		speed := bench(1, fork.List[1].AlgoVers[a], hf1Reps)
 		fmt.Println(speed/1000, "μs/hash", speed)
+		benchmark[1][fork.List[1].AlgoVers[a]] = speed
 	}
+	j, _ := json.MarshalIndent(benchmark, "  ", "  ")
+	return string(j)
 }
 
 func bench(hf int, algo string, reps int) int64 {
