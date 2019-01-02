@@ -18,8 +18,8 @@ var (
 	hf1Reps    = int(1 << 9)
 )
 
-// Bench runs benchmarks on all algorithms for each hardfork level
-func Bench() string {
+// Bench runs benchmarks on all algorithms for each hardfork level and returns a json formatted string for writing to configuration
+func Bench() (j string, b []Benchmark) {
 	var benchmark []Benchmark
 	fmt.Println("Benchmark requested")
 	fmt.Println("Please turn off any high cpu processes for a more accurate benchmark")
@@ -47,8 +47,8 @@ func Bench() string {
 		fmt.Println(speed/1000, "μs/hash", speed)
 		benchmark[1][fork.List[1].AlgoVers[a]] = speed
 	}
-	j, _ := json.MarshalIndent(benchmark, "  ", "  ")
-	return string(j)
+	jb, _ := json.MarshalIndent(benchmark, "  ", "  ")
+	return string(jb), benchmark
 }
 
 func bench(hf int, algo string, reps int) int64 {
