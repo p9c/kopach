@@ -9,9 +9,6 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/parallelcointeam/kopach/defs"
-	"github.com/parallelcointeam/kopach/getwork"
-	"github.com/parallelcointeam/kopach/global"
 	"github.com/parallelcointeam/pod/btcjson"
 	"github.com/parallelcointeam/pod/fork"
 	"github.com/parallelcointeam/pod/rpcclient"
