@@ -13,9 +13,9 @@ import (
 type Benchmark map[string]int64
 
 var (
-	sha256Reps = int(1 << 24)
-	scryptReps = int(1 << 16)
-	hf1Reps    = int(1 << 9)
+	sha256Reps = int(1 << 22)
+	scryptReps = int(1 << 14)
+	hf1Reps    = int(1 << 8)
 )
 
 // Bench runs benchmarks on all algorithms for each hardfork level and returns a json formatted string for writing to configuration
