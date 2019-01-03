@@ -12,7 +12,10 @@ import (
 func getBenchPath(cfg *config) string {
 	return cfg.DataDir + "/benchmark.json"
 }
+
 func main() {
+	var benches *[]Benchmark
+	var benchmarkJSON string
 	fmt.Println("Kopach CPU miner for Parallelcoin DUO")
 	cfg, args, err := loadConfig()
 	if err != nil {
@@ -22,8 +25,6 @@ func main() {
 	if cfg.TestNet3 {
 		fork.IsTestnet = true
 	}
-	var benchmarkJSON string
-	var benches *[]Benchmark
 	if cfg.Bench {
 		benchmarkJSON, *benches = Bench()
 		f, err := os.Create(getBenchPath(cfg))
@@ -49,31 +50,31 @@ func main() {
 			fmt.Println("Benchmark data saved")
 			f.Close()
 		}
-		benchFile, err := os.Open(getBenchPath(cfg))
-		if err != nil {
-			fmt.Println("ERROR: unable to open benchmark file", err.Error())
-			os.Exit(1)
-		}
-		defer benchFile.Close()
-		reader := bufio.NewReader(benchFile)
-		benchmarkJSON, err := ioutil.ReadAll(reader)
-		if err != nil {
-			fmt.Println("ERROR: could not read benchmark file", err.Error())
-			os.Exit(1)
-		}
-		var benches []Benchmark
-		err = json.Unmarshal(benchmarkJSON, &benches)
-		if err != nil {
-			fmt.Println("ERROR: unable to decode benchmark file, deleting", err.Error())
-			err = os.Remove(getBenchPath(cfg))
-			if err != nil {
-				fmt.Println("ERROR: unable to delete file", err.Error())
-			}
-			os.Exit(1)
-		}
+
 		fmt.Println("Mining in 'easy' mode, targeting lowest difficulty algorithm")
-		fmt.Println(benches)
-		os.Exit(0)
 	}
-	fmt.Println(benches)
+	benchFile, err := os.Open(getBenchPath(cfg))
+	if err != nil {
+		fmt.Println("ERROR: unable to open benchmark file", err.Error())
+		os.Exit(1)
+	}
+	defer benchFile.Close()
+	reader := bufio.NewReader(benchFile)
+	b, err := ioutil.ReadAll(reader)
+	if err != nil {
+		fmt.Println("ERROR: could not read benchmark file", err.Error())
+		os.Exit(1)
+	}
+	err = json.Unmarshal(b, &benches)
+	if err != nil {
+		fmt.Println("ERROR: unable to decode benchmark file, deleting", err.Error())
+		err = os.Remove(getBenchPath(cfg))
+		if err != nil {
+			fmt.Println("ERROR: unable to delete file", err.Error())
+		}
+		os.Exit(1)
+	}
+	if benches != nil {
+		fmt.Println("Loaded benchmark data")
+	}
 }
