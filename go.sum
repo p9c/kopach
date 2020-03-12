@@ -61,6 +61,7 @@ github.com/p9c/blockdb v0.0.5/go.mod h1:l6SfD3/+XuI0AREAqxX32Z2GbACAIsHF8teyrGef
 github.com/p9c/blockdb v0.0.6/go.mod h1:dXpz467SpPyr/un0JBcihkogQieWEsVB+io7xyvyMJk=
 github.com/p9c/blockdb v0.0.7/go.mod h1:lzlFyh6KsTnsdQK+/b6gOORmAGjlFU2zGRgmTTmJXJw=
 github.com/p9c/blockdb v0.0.8/go.mod h1:1izaXoRY9NpScquvy53Cj3xancS+rCMIryeY/LtCfrc=
+github.com/p9c/blockdb v0.0.9/go.mod h1:8SbaOnxV2yQAZA4xB+FlVi8zI7oBkdgTkzMg3bJFzUg=
 github.com/p9c/chain v0.0.1/go.mod h1:ztZDMiOcqsWebFNrL3P5YPy7/GD0QTmdXvndqeludWk=
 github.com/p9c/chain v0.0.2/go.mod h1:vk/7cbCidyumoJJ2uQOguFaiVmpxR1KYCfI5iXMB/jo=
 github.com/p9c/chain v0.0.4/go.mod h1:aJcDZVE5c69O1Bmo/SxdoeAFaybY5fBwiYFgOBOzJHw=
@@ -76,6 +77,7 @@ github.com/p9c/chain v0.0.12/go.mod h1:Xd1TgsLDGZlPbiRMOsquf7pWEujX0M67iR8hCsdA9
 github.com/p9c/chain v0.0.13/go.mod h1:aZwPiDuob3gUBLyku91AoTLSB9YfuIKW5RH1uq18i0w=
 github.com/p9c/chain v0.0.14/go.mod h1:ZMcmlLObP2hdOmkwLBHrfKw23pUb027v07APlQqQj60=
 github.com/p9c/chain v0.0.15/go.mod h1:GYA+I5D90vvWsdWedPUASxWp7pN1ooVglMoExfU7Rh4=
+github.com/p9c/chain v0.0.16/go.mod h1:DSqXqiShmOwU4QVFpFU1/MicP0vpjP9mYMRLAuSx1gk=
 github.com/p9c/chaincfg v0.0.1 h1:NqxeDdi0hDxtsB/77gJ9oIHrVdQvqpNeRKPuc0b6AqQ=
 github.com/p9c/chaincfg v0.0.1/go.mod h1:h0iEH4JLYozipIZhnOLRlxi2vbEsSg4WKFTIvdQOV8Y=
 github.com/p9c/chaincfg v0.0.2 h1:1WxXZwfwF/BkJJCGh4SktD+sIupZ9YutMD26tz5NaD0=
@@ -124,6 +126,7 @@ github.com/p9c/peer v0.0.5/go.mod h1:rIBlBKdqS3haSZ7er4Gbhxu/VNudIQWa0v8b4z37WGw
 github.com/p9c/peer v0.0.6/go.mod h1:v7d7bJWl8mSyMIA0Vm7PFXY9WcumTSacxgpjSJM73Eg=
 github.com/p9c/peer v0.0.7/go.mod h1:KgsFhasq0BhZbWHhBUZdSRbZhshxej/tgrzXFc5+j8I=
 github.com/p9c/peer v0.0.8/go.mod h1:ETNe/2Et4I/huZlq94WCX1DioEQ7WHM4trZK+EFITj0=
+github.com/p9c/peer v0.0.9/go.mod h1:cDtj61WDM3pxBWyBL9fCJ1viWhBa0Zql/Z/QUmCHlZo=
 github.com/p9c/pod v0.2.15/go.mod h1:7eDo4o3QI9mCWaVVzb92RgL9ks3sKn/3YaWqy2wNIeE=
 github.com/p9c/pod v0.2.16/go.mod h1:ljmidqB/vwzT/inA88KorP9rtYELyB5/YihWZrVricM=
 github.com/p9c/pod v0.2.18/go.mod h1:8qPDr8SPmjWP7ywRq0b40KYGhR0qN9SorYVepPc2Apk=
@@ -147,6 +150,7 @@ github.com/p9c/rpc v0.0.6/go.mod h1:TU/okCPLXDxPE3vw84X8OW/wYzgaEcwMZo3d6O4yWFo=
 github.com/p9c/rpc v0.0.8/go.mod h1:vA+l8oJeIJxrsr87lHS2FngM9iw9nyOAfFxfjGk0cB0=
 github.com/p9c/rpc v0.0.9/go.mod h1:kFQHhP96+Mhc773GCDHxgigeGn2mKr7Rra9TthteM98=
 github.com/p9c/rpc v0.0.10/go.mod h1:vlRuNM44GWAPqGJaZAfOGmgsvtieaz4XkihS8GoPJfY=
+github.com/p9c/rpc v0.0.11/go.mod h1:XvkzohuDLYxUNYMKzr39JDhqZMF5HIczhTyBLVd2VqA=
 github.com/p9c/simplebuffer v0.0.2/go.mod h1:5VvESf7QnywSTkUCrgD8XCBLGySsChRH7PO5WCNBgHk=
 github.com/p9c/simplebuffer v0.0.4 h1:p23XuYi1Ft9NZfaktSvZXUdNGglaQMOiE61sAuIjM2E=
 github.com/p9c/simplebuffer v0.0.4/go.mod h1:rEOfQvJj4c5pxzkJiMWpNtl1WbM9FZCA535o3AXyO2o=
@@ -175,6 +179,7 @@ github.com/p9c/util v0.0.10/go.mod h1:DJkm4dE/pGNWvFsqCuJhZdb7CEA3LO2PCwGsB/6Nlk
 github.com/p9c/util v0.0.12/go.mod h1:spTuJWzc+jTpQYyCY2hKkFVzqEba/+o1WBlkXZXmbEs=
 github.com/p9c/util v0.0.13/go.mod h1:2mD/5uPJFtpkh81+bXY6qWKBUCpKJruIu9E3KcJmmX8=
 github.com/p9c/util v0.0.14/go.mod h1:43YqJeK9EnXqswrTnlgl2BAEw/okT1UJKv2YhvysAfg=
+github.com/p9c/util v0.0.15/go.mod h1:lxqtykfNIgrQR/CML8ikDMRh/ZUV2kK7EL57F8xOQw0=
 github.com/p9c/wallet v0.0.1/go.mod h1:DOjhbSgGT0OFtlnWn6eJmzbRv6J8OvJaeXlMI6fMm0w=
 github.com/p9c/wallet v0.0.2/go.mod h1:vHCVigO7Z4UfasQgkvmG/0h4IkfneJuPr5h5MwSefXs=
 github.com/p9c/wallet v0.0.3/go.mod h1:5KE7/sLyA74fJxXMVuD+vH7XV2cYGfjc16SlQ5CBqtc=
@@ -185,6 +190,7 @@ github.com/p9c/wallet v0.0.6/go.mod h1:URd9kgw66WRIRLL7HAMMQG8D1VpFPMzsN9AZyTu4n
 github.com/p9c/wallet v0.0.9/go.mod h1:DmGhJ5UZMdlL8TVcIi4OeiqhmVcGpiWdIJLUECEeZAQ=
 github.com/p9c/wallet v0.0.10/go.mod h1:eqBhU78zULmitR/3xVTq9Go+mJV/rSfDx7BIUXQ/qZ4=
 github.com/p9c/wallet v0.0.11/go.mod h1:3fWioljTzQDLdLOQr8K0PErca4OfIP8kSziiMDG/cMg=
+github.com/p9c/wallet v0.0.12/go.mod h1:1boSAycj9UoapUD0jl6MEYYkdGTvlQ6CIAyyq2/xCPE=
 github.com/p9c/wire v0.0.1 h1:r7AbdbKUpTDM4aLaEA7mkbbp6Wr1EroKsGlzTBkVs1M=
 github.com/p9c/wire v0.0.1/go.mod h1:h4hrfEay5AqZinex9Os1pSRuR3yT1TWAU7+Mq3uM8hI=
 github.com/p9c/wire v0.0.2 h1:nKyaQIIKGp/ZpLYCoija0z6EgDb9RvROFNfaWolbaOI=
