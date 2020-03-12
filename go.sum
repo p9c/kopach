@@ -64,6 +64,7 @@ github.com/p9c/blockdb v0.0.8/go.mod h1:1izaXoRY9NpScquvy53Cj3xancS+rCMIryeY/LtC
 github.com/p9c/blockdb v0.0.9/go.mod h1:8SbaOnxV2yQAZA4xB+FlVi8zI7oBkdgTkzMg3bJFzUg=
 github.com/p9c/blockdb v0.0.10/go.mod h1:nAu1mEAGb02Eb1wSet9ZXF0a4kBynGXGEEUCG6KWpm0=
 github.com/p9c/blockdb v0.0.11/go.mod h1:EgDSZO3Cyic+7hlcG/99+4TVl8+LMfM93LDm8ywxu5Y=
+github.com/p9c/blockdb v0.0.12/go.mod h1:uN5oB9eLZ4iaIvdFdqQuYxXp2C/kYKXVQH91FcstRAY=
 github.com/p9c/chain v0.0.1/go.mod h1:ztZDMiOcqsWebFNrL3P5YPy7/GD0QTmdXvndqeludWk=
 github.com/p9c/chain v0.0.2/go.mod h1:vk/7cbCidyumoJJ2uQOguFaiVmpxR1KYCfI5iXMB/jo=
 github.com/p9c/chain v0.0.4/go.mod h1:aJcDZVE5c69O1Bmo/SxdoeAFaybY5fBwiYFgOBOzJHw=
@@ -82,6 +83,7 @@ github.com/p9c/chain v0.0.15/go.mod h1:GYA+I5D90vvWsdWedPUASxWp7pN1ooVglMoExfU7R
 github.com/p9c/chain v0.0.16/go.mod h1:DSqXqiShmOwU4QVFpFU1/MicP0vpjP9mYMRLAuSx1gk=
 github.com/p9c/chain v0.0.17/go.mod h1:ZBchJuUyHVx+3VYjuvrkxMLRCoz0syJZIBhhUTSWrQU=
 github.com/p9c/chain v0.0.18/go.mod h1:Y4h1xw7fbNjkw1WZOdIGjrVXgd6IoHAx5z5SJvGdbVA=
+github.com/p9c/chain v0.0.19/go.mod h1:fE8Nsbj9sL0Ky4m+cru2TnkzwBZGifyJj+yphoAeRow=
 github.com/p9c/chaincfg v0.0.1 h1:NqxeDdi0hDxtsB/77gJ9oIHrVdQvqpNeRKPuc0b6AqQ=
 github.com/p9c/chaincfg v0.0.1/go.mod h1:h0iEH4JLYozipIZhnOLRlxi2vbEsSg4WKFTIvdQOV8Y=
 github.com/p9c/chaincfg v0.0.2 h1:1WxXZwfwF/BkJJCGh4SktD+sIupZ9YutMD26tz5NaD0=
@@ -133,6 +135,7 @@ github.com/p9c/peer v0.0.8/go.mod h1:ETNe/2Et4I/huZlq94WCX1DioEQ7WHM4trZK+EFITj0
 github.com/p9c/peer v0.0.9/go.mod h1:cDtj61WDM3pxBWyBL9fCJ1viWhBa0Zql/Z/QUmCHlZo=
 github.com/p9c/peer v0.0.10/go.mod h1:BROuuu1Vd6W/A+fyNs+ClUWoTKGIWLQ2S8ZTFuLkG38=
 github.com/p9c/peer v0.0.11/go.mod h1:K0nm1tg3bct21XX0o/7OmmK0zqAS70KLw6Xd6joGn6Y=
+github.com/p9c/peer v0.0.12/go.mod h1:c5ZzY46W0osGJctVMA6s0LXQrVwgiZin4nnZaREGeqc=
 github.com/p9c/pod v0.2.15/go.mod h1:7eDo4o3QI9mCWaVVzb92RgL9ks3sKn/3YaWqy2wNIeE=
 github.com/p9c/pod v0.2.16/go.mod h1:ljmidqB/vwzT/inA88KorP9rtYELyB5/YihWZrVricM=
 github.com/p9c/pod v0.2.18/go.mod h1:8qPDr8SPmjWP7ywRq0b40KYGhR0qN9SorYVepPc2Apk=
@@ -159,12 +162,14 @@ github.com/p9c/rpc v0.0.10/go.mod h1:vlRuNM44GWAPqGJaZAfOGmgsvtieaz4XkihS8GoPJfY
 github.com/p9c/rpc v0.0.11/go.mod h1:XvkzohuDLYxUNYMKzr39JDhqZMF5HIczhTyBLVd2VqA=
 github.com/p9c/rpc v0.0.12/go.mod h1:+hGaN6MvRuw2k4GbQiGNeOiaha8X1yrsRNWYO+hJPRI=
 github.com/p9c/rpc v0.0.13/go.mod h1:U13x1JhvU3Q6im3C3+sG8+Hpm9z26+wi6XEJb3frJMU=
+github.com/p9c/rpc v0.0.15/go.mod h1:lF8J35UQrQm9a/U58O3Qu2NINuAY+OksMD86eeHGG3U=
 github.com/p9c/simplebuffer v0.0.2/go.mod h1:5VvESf7QnywSTkUCrgD8XCBLGySsChRH7PO5WCNBgHk=
 github.com/p9c/simplebuffer v0.0.4 h1:p23XuYi1Ft9NZfaktSvZXUdNGglaQMOiE61sAuIjM2E=
 github.com/p9c/simplebuffer v0.0.4/go.mod h1:rEOfQvJj4c5pxzkJiMWpNtl1WbM9FZCA535o3AXyO2o=
 github.com/p9c/simplebuffer v0.0.6 h1:c9iAZnVOPrN6f8TLlSJ4qB9moOE9OKbmxRnWl+Iu+VQ=
 github.com/p9c/simplebuffer v0.0.6/go.mod h1:oKxIqRd05vKUGg+PHHvE26SlE2pA4Osk7yf4S9AEpT4=
 github.com/p9c/simplebuffer v0.0.9/go.mod h1:wk25HZ0urIVJYes3W0UzqWlkek4WYBp6bfofgI5WN94=
+github.com/p9c/simplebuffer v0.0.10/go.mod h1:/0DsoxJLWyt3CdypXvt8RNqAoQsQFtlSfzL6N8hR+k4=
 github.com/p9c/stdconn v0.0.1 h1:Ac+8GIghRnRKnPIibxcYJ/cL+UY1eSQemQXVO3IDI3g=
 github.com/p9c/stdconn v0.0.1/go.mod h1:gBCliKfmFBjQCXgavmc8JAlreJVy/OQfEOWcL/limcg=
 github.com/p9c/stdconn v0.0.2 h1:2pAlWRGlhRKTNyrKij1/EFSw3Cc0FcF6ecgkPl5vEPQ=
@@ -204,6 +209,7 @@ github.com/p9c/wallet v0.0.11/go.mod h1:3fWioljTzQDLdLOQr8K0PErca4OfIP8kSziiMDG/
 github.com/p9c/wallet v0.0.12/go.mod h1:1boSAycj9UoapUD0jl6MEYYkdGTvlQ6CIAyyq2/xCPE=
 github.com/p9c/wallet v0.0.13/go.mod h1:WJJM1N/mkecKwPKLfWbRSNvsuZ7IHkqsj+wFs466Y8c=
 github.com/p9c/wallet v0.0.14/go.mod h1:NRtdQ04lz6+t+MB90eE89EzNKTp5mfhT4HaoMvjpTog=
+github.com/p9c/wallet v0.0.15/go.mod h1:0dm1ZB8pR/Uy9sYN/irwa2gdo7GireTmcnW9JExzFmw=
 github.com/p9c/wire v0.0.1 h1:r7AbdbKUpTDM4aLaEA7mkbbp6Wr1EroKsGlzTBkVs1M=
 github.com/p9c/wire v0.0.1/go.mod h1:h4hrfEay5AqZinex9Os1pSRuR3yT1TWAU7+Mq3uM8hI=
 github.com/p9c/wire v0.0.2 h1:nKyaQIIKGp/ZpLYCoija0z6EgDb9RvROFNfaWolbaOI=

@@ -4,14 +4,14 @@ go 1.13
 
 require (
 	github.com/VividCortex/ewma v1.1.1
-	github.com/p9c/chain v0.0.18
+	github.com/p9c/chain v0.0.19
 	github.com/p9c/chaincfg v0.0.5
 	github.com/p9c/chainhash v0.0.2
 	github.com/p9c/fork v0.0.2
 	github.com/p9c/logi v0.0.13
 	github.com/p9c/pod v0.2.22
 	github.com/p9c/ring v0.0.1
-	github.com/p9c/simplebuffer v0.0.9
+	github.com/p9c/simplebuffer v0.0.10
 	github.com/p9c/stdconn v0.0.2
 	github.com/p9c/transport v0.0.4
 	github.com/p9c/util v0.0.18
