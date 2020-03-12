@@ -91,6 +91,7 @@ github.com/p9c/chain v0.0.20/go.mod h1:wTsshy9qndE0GkhhSB//kDDgNRkBbr5N/4xKyJYkP
 github.com/p9c/chain v0.0.21/go.mod h1:ELXqQ32sOar78EvACSNOrumOxxGGN7H0XEl6frzv9v8=
 github.com/p9c/chain v0.0.22/go.mod h1:IDfKtolBb8t0otVh1jmphv5FhuP7sC0PPwRsMiMgItg=
 github.com/p9c/chain v0.0.23/go.mod h1:Ojm1wyH62Egv+Yy5u0EOhbuEQz5aVWUZoULQ3b8RCcY=
+github.com/p9c/chain v0.0.24/go.mod h1:t08H/ubn3uOCA2wK42VoSEqFewlu47S3pWh3c+FmsQA=
 github.com/p9c/chaincfg v0.0.1 h1:NqxeDdi0hDxtsB/77gJ9oIHrVdQvqpNeRKPuc0b6AqQ=
 github.com/p9c/chaincfg v0.0.1/go.mod h1:h0iEH4JLYozipIZhnOLRlxi2vbEsSg4WKFTIvdQOV8Y=
 github.com/p9c/chaincfg v0.0.2 h1:1WxXZwfwF/BkJJCGh4SktD+sIupZ9YutMD26tz5NaD0=
@@ -147,6 +148,7 @@ github.com/p9c/peer v0.0.13/go.mod h1:KC2ByA6DBJ+pAnchOoOgsn4MR1WODbLTYfEBrbIIq1
 github.com/p9c/peer v0.0.14/go.mod h1:mT8i4EVz0rIwFI5yIuLOIYkRvOvnyHgTYFzRe9KVxsE=
 github.com/p9c/peer v0.0.15/go.mod h1:ztK5/OXl/Swc9K30sF0Rq357leSxTbXRkCiPGoDdBCE=
 github.com/p9c/peer v0.0.16/go.mod h1:AfcGpOt7pQ/Mk8L9J5cN31TAnZkudDuUlAfk9AIbr5k=
+github.com/p9c/peer v0.0.17/go.mod h1:ZDO/iA7CHhX2IFnD+MoZoVqfHLchZolEqEOxHtiWBqg=
 github.com/p9c/pod v0.2.15/go.mod h1:7eDo4o3QI9mCWaVVzb92RgL9ks3sKn/3YaWqy2wNIeE=
 github.com/p9c/pod v0.2.16/go.mod h1:ljmidqB/vwzT/inA88KorP9rtYELyB5/YihWZrVricM=
 github.com/p9c/pod v0.2.18/go.mod h1:8qPDr8SPmjWP7ywRq0b40KYGhR0qN9SorYVepPc2Apk=
@@ -179,6 +181,7 @@ github.com/p9c/rpc v0.0.17/go.mod h1:5H97x2ptpr9dl+dXOig2TWAeh/SApMXlNDQHV0CYXww
 github.com/p9c/rpc v0.0.18/go.mod h1:b8eX4nfGc9T7BERqphVaRGZ+P7fafOz4PWqczlO/7+4=
 github.com/p9c/rpc v0.0.19/go.mod h1:rAzCFUm3wJOJpKIYwLl5iXrDx/9LsCVKgCPS+UCfoMQ=
 github.com/p9c/rpc v0.0.20/go.mod h1:HBLclTiJdJkWsJeziV8NyHmzN4bFdupGv87byYG4+78=
+github.com/p9c/rpc v0.0.21/go.mod h1:2clYGAYX8LFA8GGrZtBI4ULHvdcQquB/kZBJtGhfvGs=
 github.com/p9c/simplebuffer v0.0.2/go.mod h1:5VvESf7QnywSTkUCrgD8XCBLGySsChRH7PO5WCNBgHk=
 github.com/p9c/simplebuffer v0.0.4 h1:p23XuYi1Ft9NZfaktSvZXUdNGglaQMOiE61sAuIjM2E=
 github.com/p9c/simplebuffer v0.0.4/go.mod h1:rEOfQvJj4c5pxzkJiMWpNtl1WbM9FZCA535o3AXyO2o=
@@ -188,6 +191,7 @@ github.com/p9c/simplebuffer v0.0.9/go.mod h1:wk25HZ0urIVJYes3W0UzqWlkek4WYBp6bfo
 github.com/p9c/simplebuffer v0.0.10/go.mod h1:/0DsoxJLWyt3CdypXvt8RNqAoQsQFtlSfzL6N8hR+k4=
 github.com/p9c/simplebuffer v0.0.11/go.mod h1:vl23Hs2oqzv9mJPmz38GYko3XDzMiuFyJT9s81ybuCM=
 github.com/p9c/simplebuffer v0.0.12/go.mod h1:m1TUvlkL3yWc471m49tnQYZzeIRpJzB+HpQQOVO7P0Q=
+github.com/p9c/simplebuffer v0.0.13/go.mod h1:CB6lp3pcM/vi6l/Rgf8Y5+dnlC96xUpU/g2bUrrT8Tc=
 github.com/p9c/stdconn v0.0.1 h1:Ac+8GIghRnRKnPIibxcYJ/cL+UY1eSQemQXVO3IDI3g=
 github.com/p9c/stdconn v0.0.1/go.mod h1:gBCliKfmFBjQCXgavmc8JAlreJVy/OQfEOWcL/limcg=
 github.com/p9c/stdconn v0.0.2 h1:2pAlWRGlhRKTNyrKij1/EFSw3Cc0FcF6ecgkPl5vEPQ=
@@ -217,6 +221,7 @@ github.com/p9c/util v0.0.18/go.mod h1:rQFKrhn8pmFmpGxGqqi4qCA+wgWkiw85arb5+TlvIg
 github.com/p9c/util v0.0.19/go.mod h1:Chcx0vRsKlAWrshwKzkMz+nVO6oSfBVv9cR2w8lDcaM=
 github.com/p9c/util v0.0.20/go.mod h1:wjgFHEydWkvhWoyv27SzH8kvSNv5V9qWNw9a/NrSPPE=
 github.com/p9c/util v0.0.21/go.mod h1:SB4TlEH76XDWl3EjZyy1Ehqo7cukEVuUBpFxnJa+yIk=
+github.com/p9c/util v0.0.22/go.mod h1:sRbjXWyJBHYw8S5cWonKCsnNjD7YgIh5vVkRCkF0Bnw=
 github.com/p9c/wallet v0.0.1/go.mod h1:DOjhbSgGT0OFtlnWn6eJmzbRv6J8OvJaeXlMI6fMm0w=
 github.com/p9c/wallet v0.0.2/go.mod h1:vHCVigO7Z4UfasQgkvmG/0h4IkfneJuPr5h5MwSefXs=
 github.com/p9c/wallet v0.0.3/go.mod h1:5KE7/sLyA74fJxXMVuD+vH7XV2cYGfjc16SlQ5CBqtc=
@@ -235,6 +240,7 @@ github.com/p9c/wallet v0.0.16/go.mod h1:yGlB6vUDpSOHQbiFRBTwQiZ4fQTFOrWOvUGt3+iF
 github.com/p9c/wallet v0.0.17/go.mod h1:htIvAHjLzeez1ymjYPZB2Igr6QxN+206v+rOTUpUs7w=
 github.com/p9c/wallet v0.0.18/go.mod h1:5W969bNB+QvTbMf77q2bOcPLFekJvzR5YarA9fRENmU=
 github.com/p9c/wallet v0.0.19/go.mod h1:eiSMeYrCOPJVl2dzmmUoj+ZcUE7Be02Nla4XBnrgObA=
+github.com/p9c/wallet v0.0.20/go.mod h1:v1KnzS/Sxpqjmb7YlaYwAI5s6P5mli/ta4X25u71eUE=
 github.com/p9c/wire v0.0.1 h1:r7AbdbKUpTDM4aLaEA7mkbbp6Wr1EroKsGlzTBkVs1M=
 github.com/p9c/wire v0.0.1/go.mod h1:h4hrfEay5AqZinex9Os1pSRuR3yT1TWAU7+Mq3uM8hI=
 github.com/p9c/wire v0.0.2 h1:nKyaQIIKGp/ZpLYCoija0z6EgDb9RvROFNfaWolbaOI=
