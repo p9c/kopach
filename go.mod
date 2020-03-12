@@ -15,7 +15,7 @@ require (
 	github.com/p9c/stdconn v0.0.2
 	github.com/p9c/transport v0.0.4
 	github.com/p9c/util v0.0.10
-	github.com/p9c/wire v0.0.3
+	github.com/p9c/wire v0.0.4
 	github.com/urfave/cli v1.22.3
 	go.uber.org/atomic v1.6.0
 )
