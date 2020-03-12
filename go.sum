@@ -190,6 +190,7 @@ github.com/p9c/util v0.0.14/go.mod h1:43YqJeK9EnXqswrTnlgl2BAEw/okT1UJKv2YhvysAf
 github.com/p9c/util v0.0.15/go.mod h1:lxqtykfNIgrQR/CML8ikDMRh/ZUV2kK7EL57F8xOQw0=
 github.com/p9c/util v0.0.16/go.mod h1:ScfQlSYBCohiwCyc12KXwqObnQf9YdWsV2Oohgp2VDQ=
 github.com/p9c/util v0.0.17/go.mod h1:tPzjzIYhpsPiabio7kcEoTSYUpoxXWx3DG3N/mnmj7k=
+github.com/p9c/util v0.0.18/go.mod h1:rQFKrhn8pmFmpGxGqqi4qCA+wgWkiw85arb5+TlvIgE=
 github.com/p9c/wallet v0.0.1/go.mod h1:DOjhbSgGT0OFtlnWn6eJmzbRv6J8OvJaeXlMI6fMm0w=
 github.com/p9c/wallet v0.0.2/go.mod h1:vHCVigO7Z4UfasQgkvmG/0h4IkfneJuPr5h5MwSefXs=
 github.com/p9c/wallet v0.0.3/go.mod h1:5KE7/sLyA74fJxXMVuD+vH7XV2cYGfjc16SlQ5CBqtc=
